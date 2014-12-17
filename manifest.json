@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Full Fact",
+  "description": "Full Fact user to submit claims as (if blank, or user doesn't exist in Full Fact, claims will be submitted as 'Anonymous'",
+  "version": "0.1",
+  "icons": {"64": "icon-64.png"},
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": [ "http://*/*", "https://*/*" ],
+    "js": ["highlight-claims.js", "select-listen.js"]
+  }],
+  "options_page": "options.html",
+  "permissions": [
+    "tabs", 
+    "http://ff.willbeaufoy.net/", "http://127.0.0.1:8000/",
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": "icon-19.png",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": ["icon-64.png"]
+}

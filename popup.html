@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type='text/css'>
+body {width:220px; background-color:#fafafa;}
+#logo {float:right}
+</style>
+</head>
+<body>
+<div id='1'>
+  <img id='logo' src='icon-64.png'>
+  <p>Search current page for fact-checked claims <button type="button" id="highlight-claims">Search</button></p>
+</div>
+<hr>
+<div>
+  <p>Automatically search every page for fact-checked claims on page load <input type='checkbox' id='autorun'/></p>
+</div>
+<hr>
+<div>
+  <p>Send to Full Fact popup behaviour:<br/>
+  <!-- Appear on context menu (right click on webpage) <input type='radio' name='send-popup-behaviour' id='context' value='context'/><br/> -->
+  - Appear after any highlight <input type='radio' name='send-popup-behaviour' id='any-highlight' value='any-highlight'/><br/>
+  - Disabled <input type='radio' name='send-popup-behaviour' id='disabled' value='disabled'/>
+  </p>
+</div>
+<hr>
+<div>
+  <p>Full Fact user to submit claims as: <input type='text' id='ffuser'/></p>
+</div>
+<hr>
+<div id="status"></div>
+<button id="save">Save</button>
+<script src='options.js'></script>
+<script src="popup.js"></script>
+</body>
+</html>
